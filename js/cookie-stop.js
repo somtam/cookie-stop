@@ -3,7 +3,6 @@
     var d = window.document;
     var cookieName = "cookieStopAccept";
     var cookieNameId = "ck-stop";
-    var btAccept = "cookieStopBt";
     var cookieSetup = false;
 
     var cookieStop = {
@@ -86,10 +85,12 @@
         expiryDate.setFullYear(expiryDate.getFullYear() + 1);
         document.cookie = cookieName + '=y; expires=' + expiryDate.toGMTString() + '; path=/';
     }
-
+	
     function activateServices() {
         var bar = d.getElementById(cookieNameId);
         bar.parentNode.removeChild(bar);
+        
+        // insert other stuff you want to add after the cookie is set
     }
 
 })(this);
